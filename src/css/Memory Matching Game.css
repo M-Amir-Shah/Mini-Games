@@ -1,0 +1,76 @@
+.game-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.game-info {
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.card-back {
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.card-front {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  font-size: 24px;
+}
+
+.card.flipped .card-front {
+  transform: rotateY(0);
+}
+
+.card.flipped .card-back {
+  transform: rotateY(180deg);
+}
+
+.game-over {
+  font-weight: bold;
+  color: green;
+}
+
+.restart-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: #0056b3;
+}
